@@ -1,0 +1,18 @@
+# Projects
+# uncomment the urls if you wish to display them, and add your own URL
+
+# jazznotes.io
+- project: Norm-KL-Divergence&#58 A Remdy for Negative Monte Carlo Estimated Values of KL-Divergence
+  role: Zhenyue Qin, Jiaxu Liu, Yang Liu, Saeed Anwar, Pan Ji, Tom Gedeon
+  conf: ICASSP
+  duration: 2021
+  # url: "#"
+  description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
+
+# Springfield Community Outreach Group
+- project: Declarative Residual Network for Robust Facial Expression Recognition
+  role: Ruikai Cui, Josephine Plested, Jiaxu Liu
+  conf: ICONIP
+  duration: 2020
+  # url: "#"
+  description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
