@@ -37,7 +37,8 @@
           {% include icon-links.html %}
         </div>
 
-        <div class="executive-summary" itemprop="description">
+        <!-- <div class="executive-summary" itemprop="description"> -->
+        <div>
           {{ site.resume_header_intro }}
         </div>
 
@@ -49,6 +50,7 @@
         {% endif %} -->
 
       </header>
+
 
       {% if site.resume_section_education %}
       <!-- begin Education -->
@@ -128,9 +130,15 @@
         {% for papers in site.data.papers %}
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name" style="font-size:21px">{% if papers.url %}<a href="{{ papers.url }}" itemprop="url">{{ papers.project }}</a>{% else %}{{ papers.project }}{% endif %}</h3>
+          <h3 class="resume-item-title" itemprop="name" style="font-size:21px">
+              {{ papers.project }}
+              <!-- {% if papers.url %}<a href="{{ papers.url }}" itemprop="url">{{ papers.project }}</a>{% else %}{{ papers.project }}{% endif %} -->
+
+          </h3>
           <h4 class="resume-item-details" itemprop="description">Authors: {{ papers.role }} </h4>
-          <p class="resume-item-copy">Conference: {{ papers.conf }}  &bull; {{ papers.duration }}</p>
+          <p class="resume-item-copy">Conference: {{ papers.conf }}  &bull; {{ papers.duration }}
+              {% if papers.url %}[<a href="{{ papers.url }}" itemprop="url">Link</a>]{% else %}[Coming Soon]{% endif %}
+          </p>
           <!-- <p class="resume-item-copy">{{ papers.description }}</p> -->
         </div>
         {% endfor %}
@@ -217,6 +225,31 @@
       <!-- end Interests -->
       {% endif %}
 
+      <section class="content-section">
+          <header class="section-header">
+            <h2>Being A Gamer!!</h2>
+          </header>
+          I love playing video games and watching anime, I regard them as inseparable components of my life.
+          I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
+          These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased my pain and turned it into an incentive for me to be more enthusiastic and confident about my school life.<br>
+
+          I love playing mobile games, I'm an addicted Genshin Impact (原神) and Uma Musume (ウマ娘) player,
+          the first thing I do every day when wake up is to complete all the daily tasks of these games. I've topped up
+          uncountable allowance into such games, which actually makes me happy but painful. <br>
+
+          I also love play games on computer, like FPS games, for instance Apex Legends and Rainbow Six Siege, as well as action games such as Monster Hunter.
+          I prefer to play multiplayer online games with my friends rather than alone,
+          I basically use steam as computer gaming platform, if we do share the same interest, please add me by this steam page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
+
+          I highly respect those console companies and game producers, I thank them sincerely for bringing me lots of happiness. You know,
+          I always believe games are not just forms of entertainment, but advanced methodologies of expressing aim-oriented flow of ideas and associations. These
+          high immersive interactive experience are more straight-forward approach to create empathic stories, presenting to human. <br>
+
+          Though I've lived to experience a lot of boring games,
+          I do have experienced bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
+          and afraid of one day I will never see another masterpiece like this again. I'm telling you that gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
+      </section>
+
       {% if site.resume_section_links %}
       <!-- begin Links -->
       <section class="content-section">
@@ -236,6 +269,7 @@
       </section>
       <!-- end Links -->
       {% endif %}
+
 
       {% if site.resume_print_social_links %}
       <!-- begin Print Social Links -->
