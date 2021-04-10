@@ -48,8 +48,63 @@
         <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
         {% else %}
         {% endif %} -->
-
       </header>
+
+
+      <section class="content-section">
+          <header class="section-header">
+            <h2>Being A Gamer!!</h2>
+          </header>
+          <span id="content">
+          I love playing video games and watching anime, I regard them as inseparable components of my life.
+          I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
+          These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased my pain and turned it into an incentive for me to be more enthusiastic and confident about my school life.<br>
+
+          I love playing mobile games, I'm an addicted Genshin Impact (原神) and Uma Musume (ウマ娘) player,
+          the first thing I do every day when wake up is to complete all the daily tasks of these games. I've topped up
+          uncountable allowance into such games, which actually makes me happy but painful. <br>
+
+          I also love play games on computer, like FPS games, for instance Apex Legends and Rainbow Six Siege, as well as action games such as Monster Hunter.
+          I prefer to play multiplayer online games with my friends rather than alone,
+          I basically use steam as computer gaming platform, if we do share the same interest, please add me by this steam page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
+
+          I highly respect those console companies and game producers, I thank them sincerely for bringing me lots of happiness. You know,
+          I always believe games are not just forms of entertainment, but advanced methodologies of expressing aim-oriented flow of ideas and associations. These
+          high immersive interactive experience are more straight-forward approach to create empathic stories, presenting to human. <br>
+
+          Though I've lived to experience a lot of boring games,
+          I do have experienced bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
+          and afraid of one day I will never see another masterpiece like this again. I'm telling you that gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
+      </span>
+      [<a href="javascript:;" id="btn">Tap To Expand</a>]
+        <script type="text/javascript">
+            var num = 200;
+            var btn = document.getElementById('btn');
+            var content = document.getElementById('content');
+            var str = content.innerHTML;
+            var onOff = false;
+            btn.onclick = function() {
+                if (onOff) {
+                    content.innerHTML = str.substr(0, num) + "......";
+                    btn.innerHTML = 'Tap To Expand';
+                } else {
+                    content.innerHTML = str;
+                    btn.innerHTML = 'Tap To Fold';
+                }
+                onOff = !onOff;
+                return true;
+            };
+
+            function myfun(){
+                content.innerHTML = str.substr(0, num) + "......";
+                btn.innerHTML = 'Tap To Expand';
+            };
+
+            window.onload = function(){
+                myfun();
+            };
+        </script>
+      </section>
 
 
       {% if site.resume_section_education %}
@@ -225,30 +280,7 @@
       <!-- end Interests -->
       {% endif %}
 
-      <section class="content-section">
-          <header class="section-header">
-            <h2>Being A Gamer!!</h2>
-          </header>
-          I love playing video games and watching anime, I regard them as inseparable components of my life.
-          I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
-          These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased my pain and turned it into an incentive for me to be more enthusiastic and confident about my school life.<br>
 
-          I love playing mobile games, I'm an addicted Genshin Impact (原神) and Uma Musume (ウマ娘) player,
-          the first thing I do every day when wake up is to complete all the daily tasks of these games. I've topped up
-          uncountable allowance into such games, which actually makes me happy but painful. <br>
-
-          I also love play games on computer, like FPS games, for instance Apex Legends and Rainbow Six Siege, as well as action games such as Monster Hunter.
-          I prefer to play multiplayer online games with my friends rather than alone,
-          I basically use steam as computer gaming platform, if we do share the same interest, please add me by this steam page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
-
-          I highly respect those console companies and game producers, I thank them sincerely for bringing me lots of happiness. You know,
-          I always believe games are not just forms of entertainment, but advanced methodologies of expressing aim-oriented flow of ideas and associations. These
-          high immersive interactive experience are more straight-forward approach to create empathic stories, presenting to human. <br>
-
-          Though I've lived to experience a lot of boring games,
-          I do have experienced bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
-          and afraid of one day I will never see another masterpiece like this again. I'm telling you that gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
-      </section>
 
       {% if site.resume_section_links %}
       <!-- begin Links -->
