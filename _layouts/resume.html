@@ -192,7 +192,10 @@
           <h4 class="resume-item-details" itemprop="description">Authors: {{ papers.role }} </h4>
           <p class="resume-item-copy">Conference: {{ papers.conf }}  &bull; {{ papers.duration }}
               {% if papers.url %}[<a href="{{ papers.url }}" itemprop="url">Paper</a>]{% else %}[Paper Coming Soon]{% endif %}
-              {% if papers.code %}[<a href="{{ papers.url }}" itemprop="url">Code</a>]{% else %}[Code Released Soon]{% endif %}
+
+              {% if papers.code %}[<a href="{{ papers.code }}" itemprop="url">Code</a>]{% else %}[Code Released Soon]{% endif %}
+
+              {% if papers.thesis %}[<a href="{{ papers.thesis }}" itemprop="url">Thesis</a>]{% endif %}
           </p>
           <!-- <p class="resume-item-copy">{{ papers.description }}</p> -->
         </div>
