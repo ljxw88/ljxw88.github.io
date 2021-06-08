@@ -51,10 +51,29 @@
         {% endif %} -->
       </header>
 
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Computer Science Research</h2>
+        </header>
+        <span id="content_research">
+          I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publication and projects. Feel free to contact me!
+        </span>
+      </section>
+
+      <section class="content-section">
+        <header class="section-header">
+          <h2>Computer Music Enthusiast</h2>
+        </header>
+        <div style="text-align:center">
+          <span id="content_music">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gqOPPMMeoe4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </span>
+        </div>
+      </section>
 
       <section class="content-section">
           <header class="section-header">
-            <h2>As A Gamer</h2>
+            <h2>Video Game Devotee</h2>
           </header>
           <span id="content">
           I love playing video games and watching anime, I regard them as inseparable components of my life.
@@ -75,7 +94,7 @@
           there are indeed bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
           and afraid of one day I will never see another masterpiece like this again. Gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
       </span>
-      [<a href="javascript:;" id="btn">Tap To Expand</a>]
+      [<a href="javascript:;" id="btn">Expand</a>]
         <script type="text/javascript">
             var num = 200;
             var btn = document.getElementById('btn');
@@ -85,10 +104,10 @@
             btn.onclick = function() {
                 if (onOff) {
                     content.innerHTML = str.substr(0, num) + "......";
-                    btn.innerHTML = 'Tap To Expand';
+                    btn.innerHTML = 'Expand';
                 } else {
                     content.innerHTML = str;
-                    btn.innerHTML = 'Tap To Fold';
+                    btn.innerHTML = 'Fold';
                 }
                 onOff = !onOff;
                 return true;
@@ -96,7 +115,7 @@
 
             function myfun(){
                 content.innerHTML = str.substr(0, num) + "......";
-                btn.innerHTML = 'Tap To Expand';
+                btn.innerHTML = 'Expand';
             };
 
             window.onload = function(){
