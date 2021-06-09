@@ -1,5 +1,31 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    details {
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      padding: .5em .5em 0;
+    }
+    summary {
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      padding: .5em;
+    }
+
+    details[open] {
+      padding: .5em;
+    }
+
+    details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+  </style>
 
   {% include head.html %}
 
@@ -52,90 +78,60 @@
         <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
         {% else %}
         {% endif %} -->
-      </header>
-
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Computer Science Research</h2>
-        </header>
-        <span id="content_research">
-          I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publication and projects. Feel free to contact me!
-        </span>
-      </section>
-
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Computer Music Enthusiast</h2>
-        </header>
-    
         <div>
-          I was enrolled in ANU Laptop Ensemble 2021, where I have been inspired a lot to be a computer music artist. I love playing the piano but I don't read music score, in fact I can't read those notes and 
-          all the composition comes from inspiration. My completely off-note practice built up my ability of live composing and transcripting. I aim to incorporate my experience into computer music composition. <br>
-
-          <div style="text-align:center">
-            <video width="80%" height="80%" controls>
-              <source src="video/laptop-ensemble-gig.mp4" type="video/mp4">
-              [** your browser does not support video attribute **]
-            </video>
-          </div>
-
-          The video is about my project -- a pure data based cross-platform performance interface specially designed for Novation Launchkey Mini MK3 that I developed independently. 
-          The files are available on GitHub and feel free to take a look! [<a href="https://github.com/ljxw88/pure-data-loop-pedal">link</a>] 
+          <details>
+            <summary>&#9658; Computer Science Researcher</summary>
+            <div>
+              I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publications and projects.
+            </div>
+          </details>
         </div>
-      </section>
+        <br>
+        <div>
+          <details>
+            <summary>&#9658; Computer Music Enthusiast</summary>
+            <div>
+              I was enrolled in ANU Laptop Ensemble 2021, where I have been inspired a lot to be a computer music artist. I love playing the piano but I don't read music score, in fact I can't read those notes and 
+              all the composition comes from inspiration. My completely off-note practice built up my ability of live composing and transcripting. I aim to incorporate my experience into computer music composition. <br>
+    
+              <div style="text-align:center">
+                <video width="80%" height="80%" controls>
+                  <source src="video/laptop-ensemble-gig.mp4" type="video/mp4">
+                  [** your browser does not support video attribute **]
+                </video>
+              </div>
+    
+              The video is about my project -- a pure data based cross-platform performance interface specially designed for Novation Launchkey Mini MK3 that I developed independently. 
+              The files are available on GitHub and feel free to take a look! [<a href="https://github.com/ljxw88/pure-data-loop-pedal">link</a>] 
+            </div>
+          </details>
+        </div>
+        <br>
+        <div>
+          <details>
+            <summary>&#9658; Video Game Devotee</summary>
+            <div>
+            I love playing video games and watching anime, I regard them as inseparable components of my life.
+            I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
+            These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased my pain and turned it into an incentive for me to be more enthusiastic and confident about my school life.<br>
 
-      <section class="content-section">
-          <header class="section-header">
-            <h2>Video Game Devotee</h2>
-          </header>
-          <span id="content">
-          I love playing video games and watching anime, I regard them as inseparable components of my life.
-          I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
-          These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased my pain and turned it into an incentive for me to be more enthusiastic and confident about my school life.<br>
+            I love playing mobile games, I'm addicted to Genshin Impact (原神), Guardian Tale, and Uma Musume (ウマ娘). I've topped up
+            uncountable stipend into such games, which actually makes me happy but painful. <br>
 
-          I love playing mobile games, I'm addicted to Genshin Impact (原神), Guardian Tale, and Uma Musume (ウマ娘). I've topped up
-          uncountable stipend into such games, which actually makes me happy but painful. <br>
+            I also love computer games, especially FPS games, for instance Apex Legends and Rainbow Six Siege, as well as action games such as Monster Hunter World.
+            I prefer to play multiplayer online games with my friends rather than alone and I basically use steam as computer gaming platform, if we do share the same interest, please add me by this steam page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
 
-          I also love computer games, especially FPS games, for instance Apex Legends and Rainbow Six Siege, as well as action games such as Monster Hunter World.
-          I prefer to play multiplayer online games with my friends rather than alone and I basically use steam as computer gaming platform, if we do share the same interest, please add me by this steam page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
+            I highly respect those console and game producers, I thank them sincerely for bringing me lots of happiness. 
+            I always believe games are not just forms of entertainment, but advanced methodologies of expressing aim-oriented flow of ideas and associations. These
+            high immersive interactive experience are more straight-forward approach to create empathic stories, presenting to human. <br>
 
-          I highly respect those console and game producers, I thank them sincerely for bringing me lots of happiness. 
-          I always believe games are not just forms of entertainment, but advanced methodologies of expressing aim-oriented flow of ideas and associations. These
-          high immersive interactive experience are more straight-forward approach to create empathic stories, presenting to human. <br>
-
-          Though I've lived to experience a lot of boring games,
-          there are indeed bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
-          and afraid of one day I will never see another masterpiece like this again. Gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
-      </span>
-      [<a href="javascript:;" id="btn">Expand</a>]
-        <script type="text/javascript">
-            var num = 200;
-            var btn = document.getElementById('btn');
-            var content = document.getElementById('content');
-            var str = content.innerHTML;
-            var onOff = false;
-            btn.onclick = function() {
-                if (onOff) {
-                    content.innerHTML = str.substr(0, num) + "......";
-                    btn.innerHTML = 'Expand';
-                } else {
-                    content.innerHTML = str;
-                    btn.innerHTML = 'Fold';
-                }
-                onOff = !onOff;
-                return true;
-            };
-
-            function myfun(){
-                content.innerHTML = str.substr(0, num) + "......";
-                btn.innerHTML = 'Expand';
-            };
-
-            window.onload = function(){
-                myfun();
-            };
-        </script>
-      </section>
+            Though I've lived to experience a lot of boring games,
+            there are indeed bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
+            and afraid of one day I will never see another masterpiece like this again. Gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
+          </div>
+          </details>
+        </div>
+      </header>
 
 
       {% if site.resume_section_education %}
