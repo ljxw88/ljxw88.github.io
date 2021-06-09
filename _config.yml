@@ -14,7 +14,7 @@ resume_name:                    "Jiaxu Liu"
 resume_title:                   "Undergraduate @ ANU & SDU"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email:           "jiaxu.liu@anu.edu.au"
+resume_contact_email:           "jiaxu.liu@ieee.org"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
 resume_contact_telephone:       "+61 451873040"
