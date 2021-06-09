@@ -3,11 +3,12 @@
 
 # jazznotes.io
 - project: A Remdy for Negative Monte Carlo Estimated Values of KL-Divergence
-  role: Zhenyue Qin, Jiaxu Liu, Yang Liu, Saeed Anwar, Pan Ji, Tom Gedeon
+  role: Zhenyue Qin, Jiaxu Liu, Tom Gedeon, TBD...
   conf: PRICAI
   duration: 2021
   code: "https://github.com/ljxw88/pvae-tangent-estimator"
   thesis: "https://jiaxu.page/pdfs/Dissertation.pdf"
+  img: images/tkl-divergence.png
   # url: "#"
   #description: Jazz Notes is an open source node/ember app that helps you keep track of your music compositions and new ideas.
 
@@ -18,6 +19,7 @@
   duration: 2020
   url: "https://link.springer.com/content/pdf/10.1007%2F978-3-030-63820-7_39.pdf"
   code: "https://github.com/CuiRuikai/Bidirectional-Residual-Declarative-Network"
+  img: images/ddn-network-facial.png
   #description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.
 
 - project: Facial Expression Recognition In The Wild Using Bidirectional Convolutional Neural Network
@@ -26,4 +28,5 @@
   duration: 2021
   url: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9415198"
   code: "https://github.com/ljxw88/Facial-Emotion-Classification-Based-on-CNN-with-Bidirectionality"
+  img: images/bdnn.png
   #description: SCOG is a local monthly meetup in Springfield where we share opportunities to volunteer in the community and organize support for families and neighborhoods in need of assistance that the community can provide.

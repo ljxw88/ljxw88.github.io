@@ -214,14 +214,21 @@
         </header>
 
         {% for papers in site.data.papers %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+        <div style="float: left; width: 20%">
+          {% if papers.img %} 
+            <img style="max-width:90%" src="{{ papers.img }}">
+          {% else %}
+            <img style="max-width:90%" src="images/no-img.png">  
+          {% endif %}
+        </div>
+        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" style="margin-left:20%">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name" style="font-size:21px">
+          <h4 class="resume-item-title" itemprop="name" style="font-size:21px">
               {{ papers.project }}
               <!-- {% if papers.url %}<a href="{{ papers.url }}" itemprop="url">{{ papers.project }}</a>{% else %}{{ papers.project }}{% endif %} -->
 
-          </h3>
-          <h4 class="resume-item-details" itemprop="description">Authors: {{ papers.role }} </h4>
+          </h4>
+          <h4 class="resume-item-copy" itemprop="description">Authors: {{ papers.role }} </h4>
           <p class="resume-item-copy">Conference: {{ papers.conf }}  &bull; {{ papers.duration }}
               {% if papers.url %}[<a href="{{ papers.url }}" itemprop="url">Paper</a>]{% else %}[Paper Coming Soon]{% endif %}
 
