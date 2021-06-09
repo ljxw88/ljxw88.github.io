@@ -174,8 +174,8 @@
 
         {% for education in site.data.education %}
         <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-title" itemprop="name">{{ education.uni }}</h3>
-          <h4 class="resume-item-details group" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
+          <h3 class="resume-item-details group" itemprop="name">{{ education.uni }}</h3>
+          <h4 class="resume-item-details award-title" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
           <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
           <p class="resume-item-copy" itemprop="description">
             <ul class="resume-item-list">
@@ -202,8 +202,8 @@
 
         {% for job in site.data.experience %}
         <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-title" itemprop="name">{{ job.position }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</h4>
+          <h3 class="resume-item-details group" itemprop="name">{{ job.position }}</h3>
+          <h4 class="resume-item-details award-title" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</h4>
           <p class="resume-item-copy">{{ job.summary }}</p>
         </div><!-- end of resume-item -->
         {% endfor %}
@@ -250,7 +250,7 @@
         </div>
         <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" style="margin-left:20%">
           <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h4 class="resume-item-title" itemprop="name" style="font-size:21px">
+          <h4 class="resume-item-details" itemprop="name">
               {{ papers.project }}
               <!-- {% if papers.url %}<a href="{{ papers.url }}" itemprop="url">{{ papers.project }}</a>{% else %}{{ papers.project }}{% endif %} -->
 
