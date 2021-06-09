@@ -6,10 +6,15 @@
       border-radius: 4px;
       padding: .5em .5em 0;
     }
+    
     summary {
       font-weight: bold;
       margin: -.5em -.5em 0;
       padding: .5em;
+    }
+    summary:hover {
+      background-color: #F3F3F3;
+      cursor:pointer;
     }
 
     details[open] {
@@ -23,6 +28,14 @@
 
     summary::-webkit-details-marker {
       display: none;
+    }
+
+    .mask-word {
+      background: url('images/color-fade.png') no-repeat left bottom;
+      background-size: cover;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
   </style>
@@ -78,16 +91,16 @@
         <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
         {% else %}
         {% endif %} -->
-        <div>
+        <p>
           <details>
             <summary>&#9658; Computer Science Researcher</summary>
             <div>
               I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publications and projects.
             </div>
           </details>
-        </div>
-        <br>
-        <div>
+        </p>
+
+        <p>
           <details>
             <summary>&#9658; Computer Music Enthusiast</summary>
             <div>
@@ -105,9 +118,9 @@
               The files are available on GitHub and feel free to take a look! [<a href="https://github.com/ljxw88/pure-data-loop-pedal">link</a>] 
             </div>
           </details>
-        </div>
-        <br>
-        <div>
+        </p>
+
+        <p>
           <details>
             <summary>&#9658; Video Game Devotee</summary>
             <div>
@@ -130,8 +143,24 @@
             and afraid of one day I will never see another masterpiece like this again. Gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
           </div>
           </details>
-        </div>
+        </p>
+
       </header>
+
+      <section class="content-section">
+        <header class="section-header">
+          <h2 class="mask-word">&#9733; News</h2>
+        </header>
+        <div>
+          <ul>
+            {% for news in site.data.news %}
+            <li>
+              ({{ news.date }}) {{ news.activity }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
 
 
       {% if site.resume_section_education %}
