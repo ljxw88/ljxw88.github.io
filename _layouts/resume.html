@@ -11,9 +11,10 @@
       font-weight: bold;
       margin: -.5em -.5em 0;
       padding: .5em;
+      background-color: #ffffff9f;
     }
     summary:hover {
-      background-color: #F3F3F3;
+      background-color: #f3f3f39d;
       cursor:pointer;
     }
 
@@ -38,12 +39,20 @@
       background-clip: text;
     }
 
+    .background {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+    }
+
   </style>
 
   {% include head.html %}
 
   <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
-
 
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
@@ -395,7 +404,17 @@
       </footer>
 
     </div>
-
+    <canvas class="background"></canvas>
   </body>
+  <script>
+    window.onload = function() {
+      Particles.init({
+        selector: '.background',
+        connectParticles: true,
+        color: ['#DA0463', '#404B69'],
+        maxParticles: 50
+      });
+    };
+  </script>
 
 </html>
