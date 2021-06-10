@@ -31,6 +31,14 @@
       display: none;
     }
 
+    details.description[open] span::after {
+      content: attr(data-open);
+    }
+
+    details.description:not([open]) span::after {
+      content: attr(data-close);
+    }
+
     .mask-word {
       background: url('images/color-fade.png') no-repeat left bottom;
       background-size: cover;
@@ -46,6 +54,10 @@
       left: 0;
       right: 0;
       z-index: -1;
+    }
+
+    .font-color-1 {
+      color:rgba(33, 42, 168, 0.795)
     }
 
   </style>
@@ -101,8 +113,8 @@
         {% else %}
         {% endif %} -->
         <p>
-          <details>
-            <summary>&#9658; Computer Science Researcher</summary>
+          <details class="description">
+            <summary><span class="font-color-1" data-open="&#9660;" data-close="&#9658;"></span> Computer Science Researcher</summary>
             <p>
               I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publications and projects.
             </p>
@@ -110,8 +122,8 @@
         </p>
 
         <p>
-          <details>
-            <summary>&#9658; Computer Music Enthusiast</summary>
+          <details class="description">
+            <summary><span class="font-color-1" data-open="&#9660;" data-close="&#9658;"></span> Computer Music Enthusiast</summary>
             <div>
               <p>
               I was enrolled in ANU Laptop Ensemble 2021, where I have been inspired a lot to be a computer music artist. I love playing the piano but I don't read music score, in fact I can't read those notes and 
@@ -132,8 +144,8 @@
         </p>
 
         <p>
-          <details>
-            <summary>&#9658; Video Game Devotee</summary>
+          <details class="description">
+            <summary><span class="font-color-1" data-open="&#9660;" data-close="&#9658;"></span> Video Game Devotee</summary>
             <p>
             I love playing video games and watching anime, I regard them as inseparable components of my life.
             I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
@@ -156,6 +168,13 @@
           </details>
         </p>
 
+        <!-- <p>
+          <details class="description">
+            <summary><span data-open="&#9660;" data-close="&#9658;"></span> </summary>
+            <p>
+            </p>
+          </details>
+        </p> -->
       </header>
 
       <section class="content-section">
@@ -415,6 +434,7 @@
         maxParticles: 50
       });
     };
+
   </script>
 
 </html>
