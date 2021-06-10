@@ -31,13 +31,25 @@
       display: none;
     }
 
-    details.description[open] span::after {
+    details.description span::after {
       content: attr(data-open);
+      position: absolute;
+      transition: transform .2s;
     }
 
+    /* details.description[open] span::after {
+      transform: rotate(90deg);
+    } */
+
     details.description:not([open]) span::after {
-      content: attr(data-close);
+      transform: rotate(-90deg);
     }
+
+    /* details.description ::-moz-list-bullet {
+        font-size: 0;
+    } */
+
+    /* data-open="&#9660;" data-close="&#9658;" */
 
     .mask-word {
       background: url('images/color-fade.png') no-repeat left bottom;
@@ -114,7 +126,9 @@
         {% endif %} -->
         <p>
           <details class="description">
-            <summary><span class="font-color-1" data-open="&#9660;" data-close="&#9658;"></span> Computer Science Researcher</summary>
+            <summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            Computer Science Researcher
+            </summary>
             <p>
               I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publications and projects.
             </p>
@@ -123,7 +137,9 @@
 
         <p>
           <details class="description">
-            <summary><span class="font-color-1" data-open="&#9660;" data-close="&#9658;"></span> Computer Music Enthusiast</summary>
+            <summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            Computer Music Enthusiast
+            </summary>
             <div>
               <p>
               I was enrolled in ANU Laptop Ensemble 2021, where I have been inspired a lot to be a computer music artist. I love playing the piano but I don't read music score, in fact I can't read those notes and 
@@ -145,7 +161,9 @@
 
         <p>
           <details class="description">
-            <summary><span class="font-color-1" data-open="&#9660;" data-close="&#9658;"></span> Video Game Devotee</summary>
+            <summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            Video Game Devotee
+            </summary>
             <p>
             I love playing video games and watching anime, I regard them as inseparable components of my life.
             I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
