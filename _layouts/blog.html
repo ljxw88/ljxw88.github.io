@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+    </style>
+
+  {% include head.html %}
+
+    <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
+
+    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+
+        <p></p>
+        <!-- BLOG -->
+        <section class="content-section">
+            <header class="section-header">
+            <h2>
+                <a href="index.html" class="contact-button" style="width:100px;line-height:35px;display:inline-block;">
+                    &#10094; back
+                </a> 
+                Blog Index
+            </h2>
+            </header>
+            <div>
+            <ul>
+                {% for blogs in site.data.blogs %}
+                <li>
+                 <a href="{{ blogs.link }}">{{ blogs.name }}</a> <span style="font-weight: bold;">({{ blogs.date }})</span>
+                </li>
+                {% endfor %}
+            </ul>
+            </div>
+        </section>
+
+        <footer class="page-footer">
+            <!-- <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p> -->
+            <p class="footer-line">Send feedback by <a href="jiaxu.liu@ieee.org">email</a></p>
+        </footer>
+
+    </div>
+    
+    </body>
+
+</html>
