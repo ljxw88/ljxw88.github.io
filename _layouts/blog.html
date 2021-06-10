@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
     <style>
-
+        .round-image{
+            border: 1px solid rgba(170, 170, 170, 0);
+            border-radius: 20px;
+            max-width: 60%;
+        }
+        .img-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        @keyframes fade-in{  
+            0%{ opacity: 0;}
+            100%{opacity:1;}
+        }
+        .img-centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: aliceblue;
+            opacity: 0;
+            animation: fade-in 2s ease 0s 1;
+            animation-fill-mode:forwards;
+        }
     </style>
 
   {% include head.html %}
 
     <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
-
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
-
-        <p></p>
+        <p>
+            <div class="img-container">
+                <img src="images/blog-background.png" alt="Flowers in Chania" class="round-image" id="headimage">
+                <span id="headtext" class="img-centered-text" style="font-size: 0px;">
+                    かがりびはろうげつ<br>
+                    篝火就如同朦朧的月
+                </span>
+            </div>
+        </p>      
+        <!-- <p></p> -->
         <!-- BLOG -->
         <section class="content-section">
             <header class="section-header">
@@ -40,5 +70,16 @@
     </div>
     
     </body>
+    <script>
+        function reportWindowSize() {
+            var img = document.getElementById('headimage');
+            var width = img.width;
+            var height = img.width;
+            var text = document.getElementById("headtext");
+            text.style.fontSize = width/2+"%";
+        }
+        window.onload = reportWindowSize;
+        window.onresize = reportWindowSize;
+    </script>
 
 </html>
