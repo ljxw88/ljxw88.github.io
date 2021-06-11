@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html>
-    
-    
     <style>
 
     </style>
@@ -51,11 +49,11 @@
         console.log("parameter 1:"+getParams("blog-tag"));
         var tag = getParams("blog-tag");
 
-        file_path = "blog/"+tag+".md";
+        file_path = "blog/"+tag+".html";
         $(document).ready(function(){
             $("#content").load(file_path);
+        }).ready(function(){
             MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
-
         });
         
     </script>
