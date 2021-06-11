@@ -2,10 +2,11 @@
 <html>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-    </script>
-    <script type="text/javascript"
+      </script>
+      <script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    </script>
+      </script>
+      </head>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <style>
 
@@ -57,13 +58,9 @@
         var tag = getParams("blog-tag");
 
         file_path = "blog/"+tag+".md";
-        $("#content").load(file_path, function(responseTxt, statusTxt, xhr){
-            if(statusTxt == "success")
-                // alert("External content loaded successfully!");
-                MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
-            if(statusTxt == "error")
-                // MathJax.Hub.Typeset();
-                console.log("load error");
+        $(document).ready(function(){
+            $("#content").load(file_path);
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
         });
         
     </script>
