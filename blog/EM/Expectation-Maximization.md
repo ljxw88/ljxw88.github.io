@@ -2,7 +2,7 @@
 
 <img src="image-20210528161151765.png" alt="image-20210528161151765" style="zoom:50%;" />
 
-$X$ observed, $Z$ latent variable; $P(X,Z\mid \theta)$ the joint distribution is given, governed by parameter $\theta$. We want to maximize the data likelihodd $P(X\mid \theta)$ w.r.t. $\theta$; 
+$X$ observed, $Z$ latent variable; $P(X,Z\mid \theta)$ the joint distribution is given, governed by parameter $\theta$. We want to maximize the data likelihood $P(X\mid \theta)$ w.r.t. $\theta$; 
 
 The E step, take expectation of the complete data likelihood $P(X, Z\mid \theta)$ w.r.t. $Z$:
 $$
