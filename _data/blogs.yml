@@ -1,3 +1,9 @@
+- name: Latex render in html
+  link-tag: mathjax-render
+  date: 2021-06-11
+
 - name: Expectation-Maximization (EM) Algorithm
-  link: blog/EM/Expectation-Maximization.html
+  link-tag: em-alg
   date: 2021-05-29
+
+

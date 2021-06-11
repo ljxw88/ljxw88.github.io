@@ -36,21 +36,21 @@
         <!-- BLOG -->
         <section class="content-section">
             <header class="section-header">
-            <h2 style="font-weight: lighter;">
-                <a href="index.html" class="contact-button" style="width:100px;line-height:35px;display:inline-block;">
-                    &#10094; back
-                </a> 
-                Blog Index
-            </h2>
+                <h2 style="font-weight: lighter;">
+                    <a href="index.html" class="contact-button" style="width:100px;line-height:35px;display:inline-block;">
+                        &#10094; back
+                    </a> 
+                    Blog Index
+                </h2>
             </header>
             <div>
-            <ul>
-                {% for blogs in site.data.blogs %}
-                <li>
-                 <a href="{{ blogs.link }}">{{ blogs.name }}</a> <span style="font-weight: bold;">({{ blogs.date }})</span>
-                </li>
-                {% endfor %}
-            </ul>
+                <div class="resume-item-copy">
+                    <ul>
+                    {% for blogs in site.data.blogs %}
+                        <li><a href="blog-body.html?blog-tag={{ blogs.link-tag }}">{{ blogs.name }}</a> <span style="font-weight: bold;">[{{ blogs.date }}]</span></li>
+                    {% endfor %}
+                    </ul>
+                </div>
             </div>
         </section>
 
