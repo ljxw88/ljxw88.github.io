@@ -1,4 +1,4 @@
-<p> EM algorithm general </p>
+<h3> EM algorithm general </h3>
 
 $X$ observed, $Z$ latent variable; $P(X,Z\mid \theta)$ the joint distribution is given, governed by parameter $\theta$. We want to maximize the data likelihood $P(X\mid \theta)$ w.r.t. $\theta$; 
 
@@ -10,7 +10,7 @@ The above term can be explained as:
 $$
 \mathbb{E}_{Z\sim P(Z\mid X, \theta^{\text{old}})}f(X,Z\mid \theta)
 $$
-where $f(X,Z\mid \theta) = \ln P(X,Z\mid\theta)$ which is the $\ln$ of complete data likelihood (taking $\ln$ is for computation convenience).
+where $f(X,Z\mid \theta) = \ln P(X,Z\mid\theta)$ which is the $\ln$ of complete data likelihood (taking $\ln$ is for computation convenience).<br>
 
 We want to maximize the expectation of data likelihood by adjusting the parameter $\theta$, hence the M step:
 $$
@@ -18,6 +18,6 @@ $$
 $$
 
 
-### Case study: Gaussian Mixture Model
+<h3> Case study: Gaussian Mixture Model </h3>
 
 Under construction...

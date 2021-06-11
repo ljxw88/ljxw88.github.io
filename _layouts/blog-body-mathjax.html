@@ -49,7 +49,7 @@
         console.log("parameter 1:"+getParams("blog-tag"));
         var tag = getParams("blog-tag");
 
-        file_path = "blog/"+tag+".html";
+        file_path = "blog/"+tag+"/"+tag+".html";
         $(document).ready(function(){
             $("#content").load(file_path);
         }).ready(function(){
