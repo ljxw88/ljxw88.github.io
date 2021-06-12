@@ -31,7 +31,6 @@
 
     <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
-              
         <p></p>
         <!-- BLOG -->
         <section class="content-section">
@@ -40,11 +39,12 @@
                     <a href="index.html" class="contact-button" style="width:100px;line-height:35px;display:inline-block;">
                         &#10094; back
                     </a> 
-                    Blog Index
+                    <span>Index</span>
                 </h2>
             </header>
             <div>
                 <div class="resume-item-copy">
+                    
                     <ul>
                     {% for blogs in site.data.blogs %}
                         <li><a href="blog-body.html?blog-tag={{ blogs.link-tag }}">{{ blogs.name }}</a> <span style="font-weight: bold;">[{{ blogs.date }}]</span></li>

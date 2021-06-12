@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
     <style>
-
+        .main-body{
+            font-family: 'Times New Roman', Times, serif;
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+        }
+        pre {
+            width: 90%;
+            margin-left: 5%;
+        }
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 10px;
+        }
     </style>
 
   {% include head.html %}
@@ -10,18 +23,18 @@
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
               
         <p></p>
-        <!-- BLOG -->
+        <!-- blog main body -->
         <section class="content-section">
             <header class="section-header">
                 <h2 style="font-weight: lighter;">
                     <a href="blog-index.html" class="contact-button" style="width:100px;line-height:35px;display:inline-block;">
                         &#10094; back
                     </a> 
-                    Article
+                    <span>Article</span>
                 </h2>
             </header>
             <div>
-                <div class="resume-item-copy">
+                <div class="main-body">
                     <div id="content">
                         <div style="text-align: center;">SORRY THIS PAGE IS UNDER CONSTRUCTION</div>
                     </div>
@@ -54,8 +67,9 @@
             $("#content").load(file_path);
         }).ajaxComplete(function(){
             MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
-        }).delay(1000).queue(function() {
+        }).delay(1000).queue(function(){
             MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
+            hljs.highlightAll();
         });
         
     </script>

@@ -1,9 +1,9 @@
-- name: Latex render in html
-  link-tag: mathjax-render
-  date: 2021-06-11
-
 - name: Expectation-Maximization (EM) Algorithm
   link-tag: em-algorithm
   date: 2021-05-29
+
+- name: Set up MathJax on Jekyll and GitHub page
+  link-tag: mathjax-render
+  date: 2021-06-12
 
 

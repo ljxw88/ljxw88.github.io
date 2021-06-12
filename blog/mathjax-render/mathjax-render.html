@@ -1,16 +1,36 @@
-When $a \ne 0$, there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-$$ \begin{array}{rcll}
-y & = & x^{2}+bx+c\\
-  & = & x^{2}+2\times\dfrac{b}{2}x+c\\
-  & = & \underbrace{x^{2}+2\times\dfrac{b}{2}x+\left(\frac{b}{2}\right)^{2}}-
-      {\left(\dfrac{b}{2}\right)^{2}+c}\\
-  &  & \qquad\left(x+{\dfrac{b}{2}}\right)^{2}\\
-  & = & \left(x+\dfrac{b}{2}\right)^{2}-\left(\dfrac{b}{2}\right)^{2}+c 
-  & \left|+\left({\dfrac{b}{2}}\right)^{2}-c\right.\\
-    y+\left(\dfrac{b}{2}\right)^{2}-c & = & \left(x+
-    \dfrac{b}{2}\right)^{2} & \left|\strut(\textrm{vertex form})\right.\\
-y-y_{S} & = & (x-x_{S})^{2}\\
-S(x_{S};y_{S}) & \,\textrm{or}\, 
-    & S\left(-\dfrac{b}{2};\,\left(\dfrac{b}{2}\right)^{2}-c\right)
-\end{array} $$
+<h1> Set up MathJax on Jekyll and GitHub page </h1>
+
+<p>[Csega's original post] This article is about how to set up MathJax, a beautiful equation rendering engine written in JavaScript, which handles LaTeX and MathML (and ASCIIMathML) to your Jekyll site on GitHub (and everywhere else on the Web of course). </p>
+
+<h2 id="how-to-do-it">How to do it?</h2>
+<p>The recipe is simple.</p>
+
+<ul>
+  <li>
+    <p>Go to your _includes/head.html in your Jekyll folder structure.</p>
+  </li>
+  <li>
+    <p>Put the following code snippet there (before the &lt;/head&gt; tag).</p>
+  </li>
+</ul>
+
+<pre><code>&lt;script type=&quot;text/x-mathjax-config&quot;&gt; MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: &quot;all&quot; } } }); &lt;/script&gt;
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [ ['$','$'], [&quot;\\(&quot;,&quot;\\)&quot;] ],
+        processEscapes: true
+        }
+    });
+&lt;/script&gt;
+&lt;script src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+
+<ul>
+    <li>
+      <p>And you are done! These three lines will do three things. It will allow you to use equations through the entire site, everywhere you want. The second thing is, that you can use equations with auto numbering using two dollar signs. For example, this equation <code>$$ E = m\cdot c^2 \label{eq:mc2}$$</code> will look like the equation below and you can refer to it as <code>\ref{eq:mc2}</code> (which will render to this: \ref{eq:mc2}).</p>
+  
+      <script type="math/tex; mode=display">E = M\cdot c^2 \label{eq:mc2}</script>
+  
+      <p>But you can use inline equations too (this is the third thing), with one dollar sign, like this: <code>$ J(x) = \int{L(t, x, \dot{x}) dt} \$</code>. The equation above will render to this: $ J(x) = \int{L(t, x, \dot{x}) dt} $.</p>
+    </li>
+</ul>
