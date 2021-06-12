@@ -39,7 +39,7 @@
                     <a href="index.html" class="contact-button" style="width:100px;line-height:35px;display:inline-block;">
                         &#10094; back
                     </a> 
-                    <span>Index</span>
+                    <span>Posts</span>
                 </h2>
             </header>
             <div>
@@ -47,9 +47,12 @@
                     
                     <ul>
                     {% for blogs in site.data.blogs %}
+                    <p>
                         <li><a href="blog-body.html?blog-tag={{ blogs.link-tag }}">{{ blogs.name }}</a> <span style="font-weight: bold;">[{{ blogs.date }}]</span></li>
+                    </p>
                     {% endfor %}
                     </ul>
+                    
                 </div>
             </div>
         </section>
