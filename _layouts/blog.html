@@ -126,6 +126,7 @@
             var iconheight = iconout[0].offsetHeight;
             var icontext = document.getElementsByName("icon-text");
             for (var i=0;i<icontext.length;i++){
+                var minlength = Math.min(iconwidth,iconheight);
                 icontext[i].style.fontSize = iconheight/1.2+"px";
             }
             
