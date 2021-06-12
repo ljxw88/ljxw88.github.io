@@ -30,8 +30,8 @@
             border-radius: 20px;
             display: block;
             margin: auto;
-            padding-left: 2.5%;
-            padding-right: 2.5%;
+            padding-left: 5%;
+            padding-right: 5%;
             background-color:rgb(59, 59, 59);
             color:white;
             /* padding-top: 5px;
@@ -79,11 +79,11 @@
                             <!-- {{ blogs.name }} -->
                             <div class="text-box">
                                 <p>
-                                    <div name="icon-outline" style="float:left;width: 10%;border:2px solid rgba(255, 99, 71, 0);height: 2.6rem;text-align: center;">
+                                    <!-- <div name="icon-outline" style="float:left;width: 10%;border:2px solid rgba(255, 99, 71, 0);height: 2.6rem;text-align: center;">
                                         <i name="icon-text" class="fas fa-dice-d20"></i>
-                                    </div>
-                                    <div class="text-box-overflow" style="font-size: 1.rem;margin-left: 13%;">{{ blogs.name }}</div>
-                                    <div class="text-box-overflow" style="font-size: 0.7rem;margin-left: 13%;">Date: {{ blogs.date }}</div>
+                                    </div> -->
+                                    <div class="text-box-overflow" style="font-size: 1.rem;margin-left: 0%;">{{ blogs.name }}</div>
+                                    <div class="text-box-overflow" style="font-size: 0.7rem;margin-left: 0%;">Date: {{ blogs.date }}</div>
                                 </p>
                             </div>
                             </a> 
@@ -121,14 +121,14 @@
             var text = document.getElementById("headtext");
             text.style.fontSize = width/2+"%";
 
-            var iconout = document.getElementsByName('icon-outline');
-            var iconwidth = iconout[0].offsetWidth;
-            var iconheight = iconout[0].offsetHeight;
-            var icontext = document.getElementsByName("icon-text");
-            for (var i=0;i<icontext.length;i++){
-                var minlength = Math.min(iconwidth,iconheight);
-                icontext[i].style.fontSize = iconheight/1.2+"px";
-            }
+            // var iconout = document.getElementsByName('icon-outline');
+            // var iconwidth = iconout[0].offsetWidth;
+            // var iconheight = iconout[0].offsetHeight;
+            // var icontext = document.getElementsByName("icon-text");
+            // for (var i=0;i<icontext.length;i++){
+            //     var minlength = Math.min(iconwidth,iconheight);
+            //     icontext[i].style.fontSize = iconheight/1.2+"px";
+            // }
             
         }
         
