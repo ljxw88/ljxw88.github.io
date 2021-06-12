@@ -25,6 +25,30 @@
             animation: fade-in 2s ease 0s 1;
             animation-fill-mode:forwards;
         }
+        .text-box{
+            border: 1px solid rgba(190, 18, 18, 0);
+            border-radius: 20px;
+            display: block;
+            margin: auto;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            background-color: brown;
+            color:white;
+            /* padding-top: 5px;
+            padding-bottom: 5px; */
+            box-shadow: 5px 5px 2px 1px rgba(197, 0, 0, 0.384);
+            transition:background 0.5s;
+        }
+        .text-box-overflow{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .text-box:hover{
+            background-color:#ffffff;
+            color:brown;
+            border: 1px solid brown;
+        }
     </style>
 
   {% include head.html %}
@@ -44,14 +68,25 @@
             </header>
             <div>
                 <div class="resume-item-copy">
-                    
-                    <ul>
+
                     {% for blogs in site.data.blogs %}
                     <p>
-                        <li><a href="blog-body.html?blog-tag={{ blogs.link-tag }}">{{ blogs.name }}</a> <span style="font-weight: bold;">[{{ blogs.date }}]</span></li>
+                        <div style="width: 95%;margin-left: 2.5%;">
+                            
+                            <a href="blog-body.html?blog-tag={{ blogs.link-tag }}">
+                            <!-- <span style="font-weight: bold;">[{{ blogs.date }}]</span> -->
+                            <!-- {{ blogs.name }} -->
+                            <div class="text-box">
+                                <p>
+                                    <div class="text-box-overflow" style="font-size: 1.rem;">{{ blogs.name }}</div>
+                                    <div class="text-box-overflow" style="font-size: 0.7rem;">Date: {{ blogs.date }}</div>
+                                </p>
+                            </div>
+                            </a> 
+                    
+                        </div>
                     </p>
                     {% endfor %}
-                    </ul>
                     
                 </div>
             </div>
