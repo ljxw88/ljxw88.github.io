@@ -1,331 +1,364 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    details {
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      padding: .5em .5em 0;
-    }
-    
-    summary {
-      font-weight: bold;
-      margin: -.5em -.5em 0;
-      padding: .5em;
-      background-color: #ffffff9f;
-    }
-    summary:hover {
-      background-color: #f3f3f39d;
-      cursor:pointer;
-    }
+<style>
+	details {
+		border: 1px solid #aaa;
+		border-radius: 4px;
+		padding: .5em .5em 0;
+	}
 
-    details[open] {
-      padding: .5em;
-    }
+	summary {
+		font-weight: bold;
+		margin: -.5em -.5em 0;
+		padding: .5em;
+		background-color: #ffffff9f;
+	}
 
-    details[open] summary {
-        border-bottom: 1px solid #aaa;
-        margin-bottom: .5em;
-    }
+	summary:hover {
+		background-color: #f3f3f39d;
+		cursor: pointer;
+	}
 
-    summary::-webkit-details-marker {
-      display: none;
-    }
+	details[open] {
+		padding: .5em;
+	}
 
-    details.description span::after {
-      content: attr(data-open);
-      position: absolute;
-      transition: transform .2s;
-    }
+	details[open] summary {
+		border-bottom: 1px solid #aaa;
+		margin-bottom: .5em;
+	}
 
-    /* details.description[open] span::after {
+	summary::-webkit-details-marker {
+		display: none;
+	}
+
+	details.description span::after {
+		content: attr(data-open);
+		position: absolute;
+		transition: transform .2s;
+	}
+
+	/* details.description[open] span::after {
       transform: rotate(90deg);
     } */
 
-    details.description:not([open]) span::after {
-      transform: rotate(-90deg);
-    }
+	details.description:not([open]) span::after {
+		transform: rotate(-90deg);
+	}
 
-    /* details.description ::-moz-list-bullet {
+	/* details.description ::-moz-list-bullet {
         font-size: 0;
     } */
 
-    /* data-open="&#9660;" data-close="&#9658;" */
+	/* data-open="&#9660;" data-close="&#9658;" */
 
-    .mask-word {
-      background: url('images/color-fade.png') no-repeat left bottom;
-      background-size: cover;
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
+	.mask-word {
+		background: url('images/color-fade.png') no-repeat left bottom;
+		background-size: cover;
+		color: transparent;
+		-webkit-background-clip: text;
+		background-clip: text;
+	}
 
-    .background {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: -1;
-    }
+	.background {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+	}
 
-    .font-color-1 {
-      color:rgba(33, 42, 168, 0.795)
-    }
+	.font-color-1 {
+		color: rgba(33, 42, 168, 0.795)
+	}
 
-    .background-color-define {}
+	.debug-frame {
+		border: 1px solid rgb(0, 0, 0);
+		/* border-radius: 20px; */
+		background-color: violet;
+	}
+</style>
 
-  </style>
+{% include head.html %}
 
-  {% include head.html %}
+<body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
 
-  <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
+	<div class="wrapper" itemscope itemtype="http://schema.org/Person">
+		<meta itemprop="telephone" content="{{ site.resume_contact_telephone }}" />
+		<meta itemprop="address" content="{{ site.resume_contact_address }}" />
 
-    <div class="wrapper" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="telephone" content="{{ site.resume_contact_telephone }}"/>
-      <meta itemprop="address" content="{{ site.resume_contact_address }}"/>
+		<header class="page-header">
 
-      <header class="page-header">
+			<!-- You can turn off the avatar in _config.yml by setting to false -->
+			{% if site.resume_avatar == 'true' %}
+			<img src="images/avatar.jpg" alt="my photo" class="avatar no-print" itemprop="image">
+			{% endif %}
 
-        <!-- You can turn off the avatar in _config.yml by setting to false -->
-        {% if site.resume_avatar == 'true' %}
-        <img src="images/avatar.jpg" alt="my photo" class="avatar no-print" itemprop="image">
-        {% endif %}
-
-        <!-- Your name is defined in the _config.yml file -->
-        <h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
-        <h2 style="text-align:center"> To reach me: 
-          {{ site.resume_contact_email }}
-        <!-- <a href="mailto:{{ site.resume_contact_email }}" >{{ site.resume_contact_email }} </a>  -->
-        </h2>
+			<!-- Your name is defined in the _config.yml file -->
+			<h1 class="header-name" itemprop="name">{{ site.resume_name }}</h1>
+			<h2 style="text-align:center"> To reach me:
+				{{ site.resume_contact_email }}
+				<!-- <a href="mailto:{{ site.resume_contact_email }}" >{{ site.resume_contact_email }} </a>  -->
+			</h2>
 
 
-        <!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
-        {% if site.display_header_contact_info == 'true' %}
-        <div class="header-contact-info">
-          <p>{{ site.resume_header_contact_info }}</p>
-        </div>
-        {% endif %}
+			<!-- To display contact info here, change `display_header_contact_info` value in _config.yml to true -->
+			{% if site.display_header_contact_info == 'true' %}
+			<div class="header-contact-info">
+				<p>{{ site.resume_header_contact_info }}</p>
+			</div>
+			{% endif %}
 
-        <div class="title-bar no-print">
+			<div class="title-bar no-print">
 
-          <!-- Your title is also defined in the _config.yml file -->
-          <h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
+				<!-- Your title is also defined in the _config.yml file -->
+				<h2 class="header-title" itemprop="jobTitle">{{ site.resume_title }}</h2>
 
-          <!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
-          {% include icon-links.html %}
-        </div>
+				<!-- This is the markup for the icon links; moved out to an include because it's very verbose, and you shouldn't ever need to edit the markup (unless you want to re-order the icons); if you want to customize which links appear, define them in the _config.yml file -->
+				{% include icon-links.html %}
+			</div>
 
-        <!-- <div class="executive-summary" itemprop="description"> -->
-        <div>
-          {{ site.resume_header_intro }}
-        </div>
+			<!-- <div class="executive-summary" itemprop="description"> -->
+			<div>
+				{{ site.resume_header_intro }}
+			</div>
 
-        <!-- {% if site.resume_looking_for_work == 'yes' %}
+			<!-- {% if site.resume_looking_for_work == 'yes' %}
         <a href="mailto:{{ site.resume_contact_email }}" class="contact-button no-print" itemprop="email" style="display:inline">Contact me</a>
         {% elsif site.resume_looking_for_work == 'no' %}
         <a class="contact-button not-looking no-print">I'm not looking for work right now.</a>
         {% else %}
         {% endif %} -->
-        <p>
-          <details class="description">
-            <summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
-            CS Research Rookie
-            </summary>
-            <p>
-              I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous works include variational approximate inference, graph neural networks, mutual information maximization for representation learning, human skeleton-based action recognition, etc. If you are interested, please refer to my publications and projects.
-            </p>
-          </details>
-        </p>
+			<p>
+			<details class="description">
+				<summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					CS Research Rookie
+				</summary>
+				<p>
+					I have a broad research interst, while especially focus on Bayesian Machine Learning. My previous
+					work experience covers variational approximate inference, graph neural networks, representation learning, human skeleton-based action recognition, etc. If any of these intrigues you
+					, please refer to my publications and projects.
+				</p>
+			</details>
+			</p>
 
-        <p>
-          <details class="description">
-            <summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
-            Computer Music Enthusiast
-            </summary>
-            <div>
-              <p>
-              I was enrolled in ANU Laptop Ensemble 2021, where I have been inspired a lot to be a computer music artist. I love playing the piano but I don't read music score, in fact I can't read those notes and 
-              all the composition comes from inspiration. My completely off-note practice built up my ability of live composing and transcripting. I aim to incorporate my experience into computer music composition. <br>
-              </p>
-              <div style="text-align:center">
-                <video width="80%" height="80%" controls>
-                  <source src="video/laptop-ensemble-gig.mp4" type="video/mp4">
-                  [** your browser does not support video attribute **]
-                </video>
-              </div>
-              <p>
-              The video is about my project -- a pure data based cross-platform performance interface specially designed for Novation Launchkey Mini MK3 that I developed independently. 
-              The files are available on GitHub and feel free to take a look! [<a href="https://github.com/ljxw88/pure-data-loop-pedal">link</a>] 
-              </p>
-            </div>
-          </details>
-        </p>
+			<p>
+			<details class="description">
+				<summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					Computer Music Enthusiast
+				</summary>
+				<div>
+					<p>
+						I was enrolled in ANU Laptop Ensemble 2021, where I have been inspired a lot to be a computer
+						music artist. I love playing the piano but I don't read music score, in fact I can't read those
+						notes and
+						all the composition comes from inspiration. My completely off-note practice built up my ability
+						of live composing and transcripting. I aim to incorporate my experience into computer music
+						composition. <br>
+					</p>
+					<div style="text-align:center">
+						<video width="80%" height="80%" controls>
+							<source src="video/laptop-ensemble-gig.mp4" type="video/mp4">
+							[** your browser does not support video attribute **]
+						</video>
+					</div>
+					<p>
+						The video is about my project -- a pure data based cross-platform performance interface
+						specially designed for Novation Launchkey Mini MK3 that I developed independently.
+						The files are available on GitHub and feel free to take a look! [<a
+							href="https://github.com/ljxw88/pure-data-loop-pedal">link</a>]
+					</p>
+				</div>
+			</details>
+			</p>
 
-        <p>
-          <details class="description">
-            <summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
-            Video Game Devotee
-            </summary>
-            <p>
-            I love playing video games and watching anime, I regard them as inseparable components of my life.
-            I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP, GBSP, Subor Famicom.
-            These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased my pain and turned it into an incentive for me to be more enthusiastic and confident about my school life.<br>
+			<p>
+			<details class="description">
+				<summary><span class="font-color-1" data-open="&#9660;"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+					Video Game Devotee
+				</summary>
+				<p>
+					I love playing video games and watching anime, I regard them as inseparable components of my life.
+					I own a number of game consoles, such as PS4, Xbox One X, Nintendo Switch, Xbox 360, PSV, PS2, PSP,
+					GBSP, Subor Famicom.
+					These seemingly rebellious gaming machine were with me for a long time in my childhood, they eased
+					my pain and turned it into an incentive for me to be more enthusiastic and confident about my school
+					life.<br>
 
-            I love playing mobile games, I'm addicted to Genshin Impact (原神), Guardian Tale, and Uma Musume (ウマ娘). I've topped up
-            uncountable stipend into such games, which actually makes me happy but painful. <br>
+					I love playing mobile games, I'm addicted to Genshin Impact (原神), Guardian Tale, and Uma Musume
+					(ウマ娘). I've topped up
+					uncountable stipend into such games, which actually makes me happy but painful. <br>
 
-            I also love computer games, especially FPS games, for instance Apex Legends and Rainbow Six Siege, as well as action games such as Monster Hunter World.
-            I prefer to play multiplayer online games with my friends rather than alone and I basically use steam as computer gaming platform, if we do share the same interest, please add me by this steam page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
+					I also love computer games, especially FPS games, for instance Apex Legends and Rainbow Six Siege,
+					as well as action games such as Monster Hunter World.
+					I prefer to play multiplayer online games with my friends rather than alone and I basically use
+					steam as computer gaming platform, if we do share the same interest, please add me by this steam
+					page [<a href="https://s.team/p/gpp-hpmq/HQNQVTMR">link</a>]. <br>
 
-            I highly respect those console and game producers, I thank them sincerely for bringing me lots of happiness. 
-            I always believe games are not just forms of entertainment, but advanced methodologies of expressing aim-oriented flow of ideas and associations. These
-            high immersive interactive experience are more straight-forward approach to create empathic stories, presenting to human. <br>
+					I highly respect those console and game producers, I thank them sincerely for bringing me lots of
+					happiness.
+					I always believe games are not just forms of entertainment, but advanced methodologies of expressing
+					aim-oriented flow of ideas and associations. These
+					high immersive interactive experience are more straight-forward approach to create empathic stories,
+					presenting to human. <br>
 
-            Though I've lived to experience a lot of boring games,
-            there are indeed bunch of amazing games, those you could never forget by their storylines. I was sometimes shocked by the creativity of these producers while regret that the game has not become mainstream
-            and afraid of one day I will never see another masterpiece like this again. Gamers are thoughtful individuals, I really hope one day the society can let go of judgment and prejudice to confront the gaming community.
-          </p>
-          </details>
-        </p>
+					Though I've lived to experience a lot of boring games,
+					there are indeed bunch of amazing games, those you could never forget by their storylines. I was
+					sometimes shocked by the creativity of these producers while regret that the game has not become
+					mainstream
+					and afraid of one day I will never see another masterpiece like this again. Gamers are thoughtful
+					individuals, I really hope one day the society can let go of judgment and prejudice to confront the
+					gaming community.
+				</p>
+			</details>
+			</p>
 
-        <a href="blog-index.html" class="contact-button no-print ">access my blog</a>
+			<a href="blog-index.html" class="contact-button no-print ">access my blog</a>
 
-        <!-- <p>
+			<!-- <p>
           <details class="description">
             <summary><span data-open="&#9660;" data-close="&#9658;"></span> </summary>
             <p>
             </p>
           </details>
         </p> -->
-      </header>
+		</header>
 
-      <!-- NEWS -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2 class="mask-word">&#9733; News</h2>
-        </header>
-        <div>
-          <ul>
-            {% for news in site.data.news %}
-            <li>
-              <span style="font-weight: bold;">({{ news.date }})</span> {{ news.activity }}
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </section>
-
-
-      {% if site.resume_section_education %}
-      <!-- begin Education -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Education</h2>
-        </header>
-
-        {% for education in site.data.education %}
-        <div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
-          <h3 class="resume-item-details group" itemprop="name">{{ education.uni }}</h3>
-          <h4 class="resume-item-details award-title" itemprop="description">{{ education.degree }} &bull; {{ education.year }}</h4>
-          <h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
-          <p class="resume-item-copy" itemprop="description">
-            <ul class="resume-item-list">
-              {% for award in education.awards %}
-              <li>{{ award.award }}</li>
-              {% endfor %}
-            </ul></h5>
+		<!-- NEWS -->
+		<section class="content-section">
+			<header class="section-header">
+				<h2 class="mask-word">&#9733; News</h2>
+			</header>
+			<div>
+				<ul>
+					{% for news in site.data.news %}
+					<li>
+						<span style="font-weight: bold;">({{ news.date }})</span> {{ news.activity }}
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</section>
 
 
-          <p class="resume-item-copy">{{ education.summary }}</p>
-        </div>
-        {% endfor %}
-      </section>
-      <!-- end Education -->
-      {% endif %}
+		{% if site.resume_section_education %}
+		<!-- begin Education -->
+		<section class="content-section">
+			<header class="section-header">
+				<h2>Education</h2>
+			</header>
 
-      {% if site.resume_section_experience %}
-      <!-- begin Experience -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Experience</h2>
-        </header>
-
-        {% for job in site.data.experience %}
-        <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
-          <h3 class="resume-item-details group" itemprop="name">{{ job.position }}</h3>
-          <h4 class="resume-item-details award-title" itemprop="description">{{ job.company }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
-        </div><!-- end of resume-item -->
-        {% endfor %}
-
-      </section>
-      <!-- end Experience -->
-      {% endif %}
+			{% for education in site.data.education %}
+			<div class="resume-item" itemscope itemprop="alumniOf" itemtype="http://schema.org/CollegeOrUniversity">
+				<h3 class="resume-item-details group" itemprop="name">{{ education.uni }}</h3>
+				<h4 class="resume-item-details award-title" itemprop="description">{{ education.degree }} &bull; {{
+					education.year }}</h4>
+				<h5 class="resume-item-details award-title" itemprop="description">{{ education.award }}</h5>
+				<p class="resume-item-copy" itemprop="description">
+				<ul class="resume-item-list">
+					{% for award in education.awards %}
+					<li>{{ award.award }}</li>
+					{% endfor %}
+				</ul>
+				</h5>
 
 
-      {% if site.resume_section_projects %}
-      <!-- begin Projects -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Projects</h2>
-        </header>
+				<p class="resume-item-copy">{{ education.summary }}</p>
+			</div>
+			{% endfor %}
+		</section>
+		<!-- end Education -->
+		{% endif %}
 
-        {% for project in site.data.projects %}
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}" itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ project.role }}  &bull; {{ project.duration }}</h4>
-          <p class="resume-item-copy">{{ project.description }}</p>
-        </div>
-        {% endfor %}
+		{% if site.resume_section_experience %}
+		<!-- begin Experience -->
+		<section class="content-section">
 
-      </section>
-      <!-- end Projects -->
-      {% endif %}
+			<header class="section-header">
+				<h2>Experience</h2>
+			</header>
 
-      {% if site.resume_section_papers %}
-      <!-- begin Projects -->
-      <section class="content-section">
-        <header class="section-header">
-          <h2>Papers</h2>
-        </header>
+			{% for job in site.data.experience %}
+			<div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/Organization">
+				<h3 class="resume-item-details group" itemprop="name">{{ job.position }}</h3>
+				<h4 class="resume-item-details award-title" itemprop="description">{{ job.company }} &bull; {{
+					job.duration }}</h4>
+				<p class="resume-item-copy">{{ job.summary }}</p>
+			</div><!-- end of resume-item -->
+			{% endfor %}
 
-        {% for papers in site.data.papers %}
-        <div style="float: left; width: 20%">
-          {% if papers.img %} 
-            <img style="max-width:90%" src="{{ papers.img }}">
-          {% else %}
-            <img style="max-width:90%" src="images/no-img.png">  
-          {% endif %}
-        </div>
-        <div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" style="margin-left:20%">
-          <meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
-          <h4 class="resume-item-details" itemprop="name">
-              {{ papers.project }}
-              <!-- {% if papers.url %}<a href="{{ papers.url }}" itemprop="url">{{ papers.project }}</a>{% else %}{{ papers.project }}{% endif %} -->
-
-          </h4>
-          <h4 class="resume-item-copy" itemprop="description">Authors: {{ papers.role }} </h4>
-          <p class="resume-item-copy">Conference: {{ papers.conf }}  &bull; {{ papers.duration }}
-              {% if papers.url %}[<a href="{{ papers.url }}" itemprop="url">Paper</a>]{% else %}[Paper Coming Soon]{% endif %}
-
-              {% if papers.code %}[<a href="{{ papers.code }}" itemprop="url">Code</a>]{% else %}[Code Released Soon]{% endif %}
-
-              {% if papers.thesis %}[<a href="{{ papers.thesis }}" itemprop="url">Thesis</a>]{% endif %}
-          </p>
-          <!-- <p class="resume-item-copy">{{ papers.description }}</p> -->
-        </div>
-        {% endfor %}
-
-      </section>
-      <!-- end Projects -->
-      {% endif %}
+		</section>
+		<!-- end Experience -->
+		{% endif %}
 
 
-      {% if site.resume_section_links %}
-      <!-- begin Links -->
-      <!-- <section class="content-section">
+		{% if site.resume_section_projects %}
+		<!-- begin Projects -->
+		<section class="content-section">
+			<header class="section-header">
+				<h2>Projects</h2>
+			</header>
+
+			{% for project in site.data.projects %}
+			<div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork">
+				<meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+				<h3 class="resume-item-title" itemprop="name">{% if project.url %}<a href="{{ project.url }}"
+						itemprop="url">{{ project.project }}</a>{% else %}{{ project.project }}{% endif %}</h3>
+				<h4 class="resume-item-details" itemprop="description">{{ project.role }} &bull; {{ project.duration }}
+				</h4>
+				<p class="resume-item-copy">{{ project.description }}</p>
+			</div>
+			{% endfor %}
+
+		</section>
+		<!-- end Projects -->
+		{% endif %}
+
+		{% if site.resume_section_papers %}
+		<!-- begin paper -->
+		<section class="content-section">
+			<header class="section-header">
+				<h2>Papers</h2>
+			</header>
+
+			{% for papers in site.data.papers %}
+			<div style="float: left; width: 20%; text-align: center;height: 80px;">
+				{% if papers.img %}
+				<img style="max-width:90%;height: 100%;" src="{{ papers.img }}">
+				{% else %}
+				<img style="max-width:90%" src="images/no-img.png">
+				{% endif %}
+			</div>
+			<div class="resume-item" itemscope itemtype="http://schema.org/CreativeWork" style="margin-left:20%">
+				<meta itemprop="creator" content="{{ site.resume_name }}" itemtype="http://schema.org/Person" />
+				<h4 class="resume-item-details" itemprop="name">
+					{{ papers.project }}
+					<!-- {% if papers.url %}<a href="{{ papers.url }}" itemprop="url">{{ papers.project }}</a>{% else %}{{ papers.project }}{% endif %} -->
+
+				</h4>
+				<h4 class="resume-item-copy" itemprop="description">Authors: {{ papers.role }} </h4>
+				<p class="resume-item-copy">Conference: {{ papers.conf }} &bull; {{ papers.duration }}
+					{% if papers.url %}[<a href="{{ papers.url }}" itemprop="url">Paper</a>]{% else %}[Paper Coming
+					Soon]{% endif %}
+
+					{% if papers.code %}[<a href="{{ papers.code }}" itemprop="url">Code</a>]{% else %}[Code Released
+					Soon]{% endif %}
+
+					{% if papers.thesis %}[<a href="{{ papers.thesis }}" itemprop="url">Thesis</a>]{% endif %}
+				</p>
+				<!-- <p class="resume-item-copy">{{ papers.description }}</p> -->
+			</div>
+			{% endfor %}
+
+		</section>
+		<!-- end paper -->
+		{% endif %}
+
+
+		{% if site.resume_section_links %}
+		<!-- begin Links -->
+		<!-- <section class="content-section">
 
         <header class="section-header">
           <h2>Additional Profiles</h2>
@@ -340,20 +373,20 @@
         </div>
 
       </section> -->
-      <!-- end Links -->
-      {% endif %}
+		<!-- end Links -->
+		{% endif %}
 
 
-      <footer class="page-footer">
-        <!-- <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p> -->
-        <!-- <p class="footer-line"><a href="https://crypko.ai/">「真実がありここにあり」</a></p> -->
-        <p class="footer-line">Send feedback by <a href="mailto:jiaxu.liu@ieee.org">email</a></p>
-      </footer>
+		<footer class="page-footer">
+			<!-- <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p> -->
+			<!-- <p class="footer-line"><a href="https://crypko.ai/">「真実がありここにあり」</a></p> -->
+			<p class="footer-line">Send feedback by <a href="mailto:jiaxu.liu@ieee.org">email</a></p>
+		</footer>
 
-    </div>
-  </body>
-  <script>
+	</div>
+</body>
+<script>
 
-  </script>
+</script>
 
 </html>
