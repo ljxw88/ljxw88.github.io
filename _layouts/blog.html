@@ -37,8 +37,8 @@
             /* padding-top: 5px;
             padding-bottom: 5px; */
             box-shadow: 5px 5px 2px 1px rgba(83, 83, 83, 0.281);
-            transition:color 0.5s;
-            transition:background 0.5s;
+            transition:color 0.2s;
+            transition:background 0.2s;
         }
         .text-box-overflow{
             white-space: nowrap;
@@ -75,6 +75,7 @@
             <div>
                 <div class="resume-item-copy">
                     {% for blogs in site.data.blogs %}
+                    {% if blogs.show %}
                     <p>
                         <div style="width: 95%;margin-left: 2.5%;">
                             
@@ -94,6 +95,7 @@
                     
                         </div>
                     </p>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>

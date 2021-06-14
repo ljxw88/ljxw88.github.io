@@ -1,13 +1,16 @@
 - name: Setup MathJax on Jekyll and GitHub page
   link-tag: mathjax-render
   date: 2021-06-12
+  show: true
 
 - name: Jekyll liquid lang with Ajax (Birthday reminder artifact)
   link-tag: birthday-reminder
   date: 2021-06-12
+  show: false
 
-- name: Expectation-Maximization (EM) Algorithm
+- name: Expectation-Maximization (EM) algorithm
   link-tag: em-algorithm
   date: 2021-05-29
+  show: true
 
 
