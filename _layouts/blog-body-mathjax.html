@@ -1,41 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        .main-body{
-            font-family: 'Times New Roman', Times, serif;
-            /* font-family: Georgia, 'Times New Roman', Times, serif; */
-        }
-        pre {
-            width: 90%;
-            margin-left: 5%;
-        }
-        pre code {
-            background-color: #eee;
-            border: 1px solid #999;
-            display: block;
-            padding: 10px;
-        }
-    </style>
+<style>
+    .main-body {
+        font-family: 'Times New Roman', Times, serif;
+        /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    }
 
-  {% include head.html %}
+    pre {
+        width: 90%;
+        margin-left: 5%;
+    }
 
-    <body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
+    pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 10px;
+    }
+    
+    .body-image-class{
+
+    }
+
+    .body-image-class img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+    }
+</style>
+
+{% include head.html %}
+
+<body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %} background-color-define">
     <div class="wrapper" itemscope itemtype="http://schema.org/Person">
 
         <p>
-            <h2 class="resume-item" style="text-align: center;">
-                Jiaxu's Blog
-            </h2>
+        <h2 class="resume-item" style="text-align: center;">
+            Jiaxu's Blog
+        </h2>
         </p>
-              
+
         <p></p>
         <!-- blog main body -->
-        <section class="content-section">
+        <section class="content-section body-image-class">
             <header class="section-header">
                 <h2 style="font-weight: lighter;">
-                    <a href="blog-index.html" class="contact-button" style="width:70px;line-height:35px;display:inline-block;">
-                        &#10094;&#10094;&#10094; 
-                    </a> 
+                    <a href="blog-index.html" class="contact-button"
+                        style="width:70px;line-height:35px;display:inline-block;">
+                        &#10094;&#10094;&#10094;
+                    </a>
                     <span>posts</span>
                 </h2>
             </header>
@@ -54,30 +68,35 @@
         </footer>
 
     </div>
-    
-    </body>
-    <script type="text/javascript">
-        function getParams(key) {
-            var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
-            var r = window.location.search.substr(1).match(reg);
-            if (r != null) {
-                return unescape(r[2]);
-            }
-            return null;
-        };
-        console.log("parameter 1:"+getParams("blog-tag"));
-        var tag = getParams("blog-tag");
 
-        file_path = "blog/"+tag+"/"+tag+".html";
-        $(document).ready(function(){
-            $("#content").load(file_path);
-        }).ajaxComplete(function(){
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
-        }).delay(1000).queue(function(){
-            MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
-            hljs.highlightAll();
+</body>
+<script type="text/javascript">
+    function getParams(key) {
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) {
+            return unescape(r[2]);
+        }
+        return null;
+    };
+    console.log("parameter 1:" + getParams("blog-tag"));
+    var tag = getParams("blog-tag");
+
+    file_path = "blog/" + tag + "/" + tag + ".html";
+    $(document).ready(function () {
+        $("#content").load(file_path, function (response, status, xhr) {
+            $(".body-image-class img").each(function(){
+                var img_url = $(this).attr("src");
+                $(this).attr('src',"blog/" + tag + "/" + img_url);
+            });
         });
-        
-    </script>
+    }).ajaxComplete(function () {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
+    }).delay(1000).queue(function () {
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub, "content"]);
+        hljs.highlightAll();
+    });
+
+</script>
 
 </html>
