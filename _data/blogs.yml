@@ -1,3 +1,8 @@
+- name: Vue frontend notes
+  link-tag: vue-learning-note
+  date: 2021-06-14
+  show: true
+
 - name: Setup MathJax on Jekyll and GitHub page
   link-tag: mathjax-render
   date: 2021-06-12
