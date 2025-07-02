@@ -20,7 +20,12 @@ redirect_from:
 <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
 
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
-I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the University of Liverpool, supervised by Professor Xiaowei Huang and Professor Xinping Yi. I am interested in (Non-Euclidean) Geometric Deep Learning (*e.g.* Hyperbolic Graph Embedding), Efficient Foundation Models (*e.g.* Linear Scalable Transformers) and AI-Human Preference Alignment (*e.g.* RLHF). Prior to that, I received my dual bachelor's degree (2017-2021) in Advanced Computing from The Australian National University and Computer Science from Shandong University.
+I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the University of Liverpool, supervised by Professor Xiaowei Huang and Professor Xinping Yi. Specifically, my research focus on the following topics:
+- (Non-Euclidean) Geometric Deep Learning (*e.g.,* Hyperbolic Graph Embedding)
+- Efficient Foundation Models (*e.g.,* Linear/Quasilinear Scalable Transformers)
+- Human-AI Preference Alignment (*e.g.,* RLHF).
+
+Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer Science from both Australian National University and Shandong University.
 
 # Recent News
 - *(06/2025)* One paper accepted to TMLR.
