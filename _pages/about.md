@@ -25,7 +25,7 @@ I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the 
 # Recent News
 - *(06/2025)* One paper accepted to TMLR.
 <!-- - *(02/2025)* Invited to serve as a reviewer for NeurIPS 2025. -->
-- *(01/2025)* One accepted to ICLR 2025.
+- *(01/2025)* One paper accepted to ICLR 2025.
 - *(08/2024)* One paper accepted to IJCAI 2024.
 - *(08/2024)* One paper accepted to ECML-PKDD 2024.
 <!-- - *(08/2024)* Invited to serve as a reviewer for ICLR 2024. -->
