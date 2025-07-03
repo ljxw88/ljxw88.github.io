@@ -91,5 +91,7 @@ __Full list__ of my articles on <a href="https://scholar.google.com/citations?us
 - Invited Reviewer for Frontiers in Neurorobotics
 
 # Teaching
+
+I was involved as a TA in the following courses:
 - *University of Liverpool*: COMP338 (Computer Vision), ELEC230 (Robotics), COMP534 (Applied Artificial Intelligence)
 - *Australian National University*: COMP3600/6466 (Algorithms)
