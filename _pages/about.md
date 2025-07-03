@@ -67,7 +67,7 @@ Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer S
 
 [DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks](https://ieeexplore.ieee.org/abstract/document/10632071)
 
-**Jiaxu Liu**, Xinping Yi, Xinping Yi, Xiaowei Huang
+**Jiaxu Liu**, Xinping Yi, Xiaowei Huang
 </div>
 </div>
 
