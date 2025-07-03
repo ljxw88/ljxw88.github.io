@@ -28,13 +28,14 @@ I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the 
 Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer Science from both Australian National University and Shandong University.
 
 # Recent News
-- *(06/2025)* One paper accepted to TMLR.
+- *(06/2025)* One paper accepted to Transactions on Machine Learning Research.
 <!-- - *(02/2025)* Invited to serve as a reviewer for NeurIPS 2025. -->
 - *(01/2025)* One paper accepted to ICLR 2025.
 - *(08/2024)* One paper accepted to IJCAI 2024.
 - *(08/2024)* One paper accepted to ECML-PKDD 2024.
 <!-- - *(08/2024)* Invited to serve as a reviewer for ICLR 2024. -->
-- *(06/2024)* One paper accepted to IEEE TAI.
+- *(06/2024)* One paper accepted to IEEE Transactions on Artificial Intelligence.
+- *(04/2024)* One paper accepted to ICASSP 2024.
 <!-- - *(05/2024)* Invited to serve as a reviewer for NeurIPS 2024. -->
 - *(03/2024)* One paper accepted to AAAI 2024.
 
