@@ -27,6 +27,10 @@ I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the 
 
 Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer Science from both Australian National University and Shandong University.
 
+<div>
+<b markdown="1">*I am currently on the job market for 2025-2026.*</b>
+</div>
+
 # Recent News
 - *(06/2025)* One paper accepted to Transactions on Machine Learning Research.
 <!-- - *(02/2025)* Invited to serve as a reviewer for NeurIPS 2025. -->
