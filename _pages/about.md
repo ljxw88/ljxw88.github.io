@@ -17,13 +17,14 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
+# About Me
 <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
 
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
 I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the University of Liverpool, supervised by Professor Xiaowei Huang and Professor Xinping Yi. Specifically, my research focus on the following topics:
-- (Non-Euclidean) Geometric Deep Learning (*e.g.,* Hyperbolic Graph Embedding)
-- Efficient Foundation Models (*e.g.,* Linear/Quasilinear Scalable Transformers)
-- Human-AI Preference Alignment (*e.g.,* RLHF).
+- Efficient AI (*e.g.,* Hardware-Aligned Linear/Quasilinear Scalable Transformers)
+- (Non-Euclidean) Geometric Deep Learning (*e.g.,* Hyperbolic Graph Embedding) 
+- Human-AI Preference Alignment (*e.g.,* RLHF, Red-teaming and Defence).
 
 Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer Science from both Australian National University and Shandong University.
 
@@ -66,7 +67,7 @@ Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer S
 </div>
 </div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE TAI</div><img src='images/TAI-1.png' alt="sym" width="100%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div><div class="badge">IEEE Trans. AI</div><img src='images/TAI-1.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
 
 [DeepHGCN: Toward Deeper Hyperbolic Graph Convolutional Networks](https://ieeexplore.ieee.org/abstract/document/10632071)
@@ -89,13 +90,12 @@ __Full list__ of my articles on <a href="https://scholar.google.com/citations?us
 - *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
 # Academic Service
-- Invited Reviewer for NeurIPS 2025
+- Program Committee for AAAI 2025
+- Invited Reviewer for NeurIPS 2024, 2025
 - Invited Reviewer for ICLR 2025
-- Invited Reviewer for NeurIPS 2024
 - Invited Reviewer for Frontiers in Neurorobotics
 
 # Teaching
-
 I was involved as a TA in the following courses:
 - *University of Liverpool*: COMP338 (Computer Vision), ELEC230 (Robotics), COMP534 (Applied Artificial Intelligence)
 - *Australian National University*: COMP3600/6466 (Algorithms)
