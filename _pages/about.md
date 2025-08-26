@@ -21,7 +21,7 @@ redirect_from:
 <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
 
 My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>). -->
-I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the University of Liverpool, supervised by Professor Xiaowei Huang and Professor Xinping Yi. Specifically, my research focus on the following topics:
+I earned my Ph.D. (2021-2025) from the University of Liverpool, under the supervision of Professor Xiaowei Huang and Professor Xinping Yi. My current research focus on the following topics:
 - Efficient AI (*e.g.,* Hardware-Aligned Linear/Quasilinear Scalable Transformers)
 - (Non-Euclidean) Geometric Deep Learning (*e.g.,* Hyperbolic Graph Embedding) 
 - Human-AI Preference Alignment (*e.g.,* RLHF, Red-teaming and Defence).
@@ -29,7 +29,7 @@ I am a final-year Ph.D. candidate (2021-2025) in the Department of EEECS at the 
 Before Liverpool, I received my dual bachelor's degree (2017-2021) in Computer Science from both Australian National University and Shandong University.
 
 <div>
-<b markdown="1">*I am currently on the job market for 2025-2026.*</b>
+<b markdown="1">*From October 2025, I will be joining the Imperial College London as a postdoctoral researcher.*</b>
 </div>
 
 # Recent News
